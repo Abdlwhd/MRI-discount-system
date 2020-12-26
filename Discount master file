@@ -1,31 +1,37 @@
- import java.util.*;
-class Old_patients
+import java.util.*;
+class Oldn_young_patients
 {
 
 public static void main(String args[])
 {
-    String pname;
+   String pname;
 	double page,tp=200,pno,i,ntp;
-	Scanner scanner=new Scanner(System.in);
+   Scanner scanner=new Scanner(System.in);
 	 System.out.println("Enter number of patient number");
 	pno=scanner.nextInt();
 	for(i=1;i<=pno;i++)
         {
 	System.out.println("Enter patient name");
-        pname= scanner.nextLine();
+       pname= scanner.nextLine();
         scanner.nextLine();
 	System.out.println("Enter patient age");
 	page=scanner.nextInt();
 	
           if (page>=60)
           {
-            ntp=200-(tp*0.3);
+           ntp=200-(tp*0.3);
            System.out.println("New price is "+ntp);
           }
+          else if(page<=10)
+          {
+          	 ntp=200-(tp*0.5);
+           System.out.println("New price is "+ntp);
+          }
+         
          else
           {
             System.out.println("Not applicable for this patient");
-          }
-        }
+    } //(End IF)
+    } //(End Loop)
 }
 }
